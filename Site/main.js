@@ -32,7 +32,7 @@ ScrollReveal().reveal(".header__content h2",{
 
 ScrollReveal().reveal(".header__content h1",{
     ...scrollRevealOptions,
-    delay: 1000,
+    delay: 500,
 });
 
 ScrollReveal().reveal(".header__content p",{
