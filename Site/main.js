@@ -55,3 +55,11 @@ ScrollReveal().reveal(".service__card",{
     ...scrollRevealOptions,
     interval: 500,
 });
+
+ScrollReveal().reveal(".service__row",{
+    distance: '50px',
+    origin: "bottom",
+    opacity: 0,
+    duration: 1000,
+    interval: 500,
+});

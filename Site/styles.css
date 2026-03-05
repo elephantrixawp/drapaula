@@ -106,7 +106,7 @@ nav{
 header{
     max-width: var(--max-width);
     margin: auto;
-    padding: 2rem 1rem;
+    padding:10rem 2rem 1rem;
     display: grid;
     gap: 4rem 1rem;
 }
@@ -215,6 +215,7 @@ header{
 
 .service__row{
     display: grid;
+    grid-template-columns: 1fr;
     gap: 2rem;
     align-items: center;
     background-color: var(--primary-color);
@@ -222,11 +223,19 @@ header{
     border-radius: 20px;
 }
 
-.service__image img{
+.service__image{
     width: 100%;
     height: 350px;
+    overflow: hidden;
     border-radius: 20px;
+}
+
+.service__image img{
+    width: 100% !important;
+    height: 350px !important;
+    border-radius: 20px !important;
     object-fit: cover;
+    display: block;
 }
 
 .service__info{
@@ -260,7 +269,7 @@ header{
     margin-top: 1rem;
     font-size: 1rem;
     font-weight: 600;
-    color: black;
+    color: var(--primary-color);
     background-color: var(--white);
     border-radius: 20px;
     transition: .3s;
@@ -270,6 +279,31 @@ header{
 .btn:hover{
     background-color: rgb(216, 211, 211);
 }
+
+.whatsapp-float{
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-float:hover{
+    transform: scale(1.1);
+    background-color: var(--primary-color-dark);
+}
+
+
+
 
 @media(width > 768px) {
     nav{
@@ -321,9 +355,10 @@ header{
         color: var(--primary-color);
     }
 
-    header { /* Removido o ponto */
+    header {
         grid-template-columns: 1fr 1fr; /* Cria duas colunas de tamanhos iguais */
         align-items: center; /* Alinha o texto e a imagem verticalmente ao centro */
+        padding-top: 2rem;
     }
 
     .header__content :is(h1, h2, h4, p){
@@ -336,5 +371,31 @@ header{
 
     .header__socials{
         justify-content: flex-start;
+    }
+
+    .service__image{
+        height: 450px;
+    }
+
+    .service__image img{
+        height: 450px !important;
+    }
+
+    .service__row{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3rem;
+        gap: 3rem;
+    }
+
+    .service__row:nth-child(even){
+        grid-template-columns: 1fr 1fr;
+    }
+
+     .service__row:nth-child(even) .service__image{
+        order: 2;
+    }
+
+    .service__row:nth-child(even) .service__info{
+        order: 1;
     }
 }
