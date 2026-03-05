@@ -57,9 +57,14 @@ ScrollReveal().reveal(".service__card",{
 });
 
 ScrollReveal().reveal(".service__row",{
-    distance: '50px',
+    distance: '200px',
     origin: "bottom",
     opacity: 0,
     duration: 1000,
     interval: 500,
+});
+
+ScrollReveal().reveal(".contact__form",{
+    ...scrollRevealOptions,
+    delay: 500,
 });
