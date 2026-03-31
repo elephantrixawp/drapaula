@@ -89,7 +89,7 @@ nav{
     gap: 2rem;
     padding: 2rem;
     background-color: var(--primary-color);
-    transition: transform 0.5s;
+    transition: transform 0.2s;
     z-index: -1;
 }
 
@@ -138,7 +138,6 @@ header{
     font-weight: 800;
     line-height: 4.5rem;
     color: var(--text-dark);
-    text-align: center;
 }
 
 .header__content h4{
@@ -173,7 +172,7 @@ header{
     color: var(--white);
     background-color: var(--primary-color);
     border-radius: 5rem;
-    transition: .3s;
+    transition: .1s;
     cursor: pointer;
 }
 
@@ -200,7 +199,7 @@ header{
     color: var(--white);
     background-color: var(--primary-color);
     border-radius: 50%;
-    transition: .3s;
+    transition: .2s;
 }
 
 .header__socials a:hover{
@@ -272,7 +271,7 @@ header{
     color: var(--primary-color);
     background-color: var(--white);
     border-radius: 20px;
-    transition: .3s;
+    transition: .30s;
     box-shadow: 0px 2px 2px 0 rgb(161, 161, 161);
 }
 
